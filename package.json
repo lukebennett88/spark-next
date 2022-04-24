@@ -9,6 +9,10 @@
     "lint": "next lint",
     "start": "next start"
   },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
   "dependencies": {
     "@spark-web/accordion": "^1.0.1",
     "@spark-web/alert": "^1.0.1",
