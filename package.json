@@ -3,10 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "dev": "next dev",
+    "postinstall": "patch-package",
+    "lint": "next lint",
+    "start": "next start"
   },
   "dependencies": {
     "@spark-web/accordion": "^1.0.1",
@@ -40,16 +41,16 @@
     "@spark-web/text-list": "^1.0.1",
     "@spark-web/theme": "^2.0.0",
     "@spark-web/utils": "^1.0.1",
-    "next": "12.1.5",
-    "react": "17.0.2",
-    "react-dom": "17.0.2"
-  },
-  "devDependencies": {
     "@types/node": "17.0.25",
     "@types/react": "17.0.44",
     "@types/react-dom": "17.0.15",
     "eslint": "8.13.0",
     "eslint-config-next": "12.1.5",
+    "next": "12.1.5",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
     "typescript": "4.6.3"
   }
 }
