@@ -2,6 +2,23 @@ import { Box } from '@spark-web/box'
 import { Text, useText } from '@spark-web/text'
 import { css } from '@emotion/css'
 import { useTheme } from '@spark-web/theme'
+import { Stack } from '@spark-web/stack'
+import { Heading } from '@spark-web/heading'
+
+export function Section({
+  children,
+  heading,
+}: {
+  children: React.ReactNode
+  heading: string
+}) {
+  return (
+    <Stack gap="large">
+      <Heading level="2">{heading}</Heading>
+      {children}
+    </Stack>
+  )
+}
 
 type PlaceholderProps = {
   height?: string | number

@@ -27,7 +27,7 @@ import { TextLink } from '@spark-web/text-link'
 import { TextList } from '@spark-web/text-list'
 import Head from 'next/head'
 
-import { InlineCode, Placeholder } from '../components/example-helpers'
+import { InlineCode, Placeholder, Section } from '../components/example-helpers'
 
 export default function Home() {
   return (
@@ -72,21 +72,6 @@ export default function Home() {
         <TextListSection />
       </Stack>
     </Container>
-  )
-}
-
-function Section({
-  children,
-  heading,
-}: {
-  children: React.ReactNode
-  heading: string
-}) {
-  return (
-    <Stack gap="large">
-      <Heading level="2">{heading}</Heading>
-      {children}
-    </Stack>
   )
 }
 
