@@ -4,6 +4,7 @@ import { css } from '@emotion/css'
 import { useTheme } from '@spark-web/theme'
 import { Stack } from '@spark-web/stack'
 import { Heading } from '@spark-web/heading'
+import { useInView } from 'react-intersection-observer'
 
 export function Section({
   children,
@@ -12,10 +13,11 @@ export function Section({
   children: React.ReactNode
   heading: string
 }) {
+  const { ref, inView } = useInView({ triggerOnce: true })
   return (
-    <Stack gap="large">
+    <Stack ref={ref} gap="large">
       <Heading level="2">{heading}</Heading>
-      {children}
+      {inView ? children : null}
     </Stack>
   )
 }
