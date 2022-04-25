@@ -1,10 +1,9 @@
-import { Box } from '@spark-web/box'
-import { Text, useText } from '@spark-web/text'
 import { css } from '@emotion/css'
-import { useTheme } from '@spark-web/theme'
-import { Stack } from '@spark-web/stack'
+import { Box } from '@spark-web/box'
 import { Heading } from '@spark-web/heading'
-import { useInView } from 'react-intersection-observer'
+import { Stack } from '@spark-web/stack'
+import { Text, useText } from '@spark-web/text'
+import { useTheme } from '@spark-web/theme'
 
 export function Section({
   children,
@@ -13,11 +12,10 @@ export function Section({
   children: React.ReactNode
   heading: string
 }) {
-  const { ref, inView } = useInView({ triggerOnce: true })
   return (
-    <Stack ref={ref} gap="large">
+    <Stack gap="large">
       <Heading level="2">{heading}</Heading>
-      {inView ? children : null}
+      {children}
     </Stack>
   )
 }
